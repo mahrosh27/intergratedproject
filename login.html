@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <img src="logo.png" />
+    <title>Login</title>
+    <style>
+        body {
+            background-color: oldlace;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <form id="login-form">
+            <h1>Login</h1>
+            <div class="input-box">
+                <input type="text" id="username" placeholder="Username" required>
+            </div>
+            <div class="input-box">
+                <input type="password" id="password" placeholder="Password" required>
+            </div>
+            <button type="submit" class="btn">Log In</button>
+            <div class="remember-forgot">
+                <label><input type="checkbox"> Remember me</label>
+                <a href="forgotpassword.html">Forgot password?</a>
+                Don't have an account? <a href="signup.html">Sign up</a>
+            </div>
+        </form>
+    </div>
+    <script>
+        document.getElementById('login-form').addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevent form submission
+            const username = document.getElementById('username').value;
+            localStorage.setItem('username', username); // Store username in localStorage
+            window.location.href = 'admin.html'; // Redirect to admin.html
+        });
+    </script>
+    <script>
+        document.getElementById('login-form').addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevent form submission
+            const username = document.getElementById('username').value;
+            localStorage.setItem('username', username); // Store username in localStorage
+           
+        });
+    </script>
+
+
+</body>
+</html>

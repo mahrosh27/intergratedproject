@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Apply</title>
+</head>
+<body style="background-color:oldlace">
+    <img src="logo.png" />
+    <h1>Apply</h1>
+    <h2 id="welcomeMessage">Welcome!</h2>
+
+    <h4>Contact information</h4>
+    <form id="application-form" action="https://docs.google.com/forms/d/e/1FAIpQLScgKGzplqoS9ehF_jy-wFEAhtfJtqde52o23YdNxvZE-W2_XQ/formResponse" method="POST" enctype="multipart/form-data">
+        Full name: <input type="text" name="entry.959760218" required>
+        <br><br>
+        DOB: <input type="date" name="entry.YOUR_ENTRY_ID_FOR_DOB" required>
+        <br><br>
+        Phone number: <input type="tel" name="entry.2025827965" required>
+        <br><br>
+
+        <label for="Gender">Gender:</label>
+        <input type="radio" name="entry.992011362" value="Male"> Male<br>
+        <input type="radio" name="entry.992011362" value="Female"> Female<br>
+        <input type="radio" name="entry.992011362" value="Prefer not to say"> Prefer not to say<br>
+        <br><br>
+
+        Address: <input type="text" name="entry.1622227162" required>
+        <br><br>
+
+        <h4>Course information</h4>
+        <label for="course">Choose your course:</label>
+        <option value="-">-</option>
+
+        <input type="radio" name="entry.9953917" value="Computer Science BSc (Hons) 3 years" /> Computer Science BSc (Hons) 3 years <br>
+        <input type="radio" name="entry.9953917" value="Software Engineering" /> Software Engineering BSc (Hons) 3 year <br>
+        <input type="radio" name="entry.9953917" value="Cyber Security BSc (Hons) 4 years" /> Cyber Security BSc (Hons) 4 years <br>
+        <br><br>
+
+        <label for="Year">Year of study:</label>
+
+        <input type="radio" name="entry.2128871477" value="September 2024" /> September 2024<br>
+        <input type="radio" name="entry.2128871477" value="September 2025" /> September 2025<br>
+        <input type="radio" name="entry.2128871477" value="January 2025" /> January 2025<br>
+        <br><br>
+
+        </select>
+        <br><br>
+
+        <h4>More information</h4>
+        Personal statement: <input type="file" name="entry.YOUR_ENTRY_ID_FOR_PERSONAL_STATEMENT">
+        <br><br>
+        Form of identification: <input type="file" name="entry.YOUR_ENTRY_ID_FOR_IDENTIFICATION">
+        <br><br>
+        Recommendation/s: <input type="file" name="entry.YOUR_ENTRY_ID_FOR_RECOMMENDATION">
+        <br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+
+    <h3>Thank you! This page will take you to google docs for a quick confirm, once done your application is submitted!</h3>
+
+    <script>
+        window.addEventListener('load', function () {
+            const username = localStorage.getItem('username');
+            if (username) {
+                document.getElementById('welcomeMessage').innerText = `Hello, ${username}!`;
+            } else {
+                document.getElementById('welcomeMessage').innerText = `Hello, Guest!`;
+            }
+        });
+    </script>
+</body>
+</html>

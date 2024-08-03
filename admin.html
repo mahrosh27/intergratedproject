@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <img src="logo.png" />
+    <table cellspacing="10" cellpadding="10">
+        <tr>
+            <td width="200"><a href="aboutus.html">About us</a></td>
+            <td width="200"><a href="Whatsnew.html">Whats new!</a></td>
+            <td width="200"><a href="Library.html">Library</a></td>
+            <td width="200"><a href="index.html">Courses</a></td>
+            <td width="200"><a href="Campus.html">Campus</a></td>
+            <td width="200"><a href="International.html">International</a></td>
+            <td width="200"><a href="admin.html">My profile</a></td>
+        </tr>
+    </table>
+    <title>Admin Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: oldlace;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>University Admin Page</h1>
+        <h3>Welcome, <span id="username-display"></span>!</h3> <h4> Occupation: Student</h4>
+        
+    </div>
+    <div class="content">
+        <section id="courses-info">
+            <h3>Courses Information</h3>
+            Currently you havent applied to any courses,<a href="apply.html">Apply here</a>
+            <section>
+                For more information, click Courses above. Or click <a href="index.html">here</a>
+            </section>
+        </section>
+        <section id="modules-details">
+            <h3>Modules Details</h3> Currently none are selected
+        </section>
+        <section id="course-selection">
+            <h3>Course Selection</h3>
+            Currently there are three courses of interest -
+        </section>
+        <table>
+            <tr>
+                <td><a href="computerscience.html">Computer science</a> </td>
+               
+            </tr>
+            <tr>
+                <td><a href="softwareengineering.html">Software engineering</a></td>
+               
+            </tr>
+            <tr>
+                <td><a href="cybersecurity.html">Cyber Security</a><td>
+            </tr>
+            <td>
+                click on them to view more
+            </td>
+        </table>
+
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const username = localStorage.getItem('username'); // Retrieve username from localStorage
+            if (username) {
+                document.getElementById('username-display').textContent = username;
+            } else {
+                window.location.href = 'login.html'; // Redirect to login if no username found
+            }
+        });
+    </script>
+</body>
+</html>
